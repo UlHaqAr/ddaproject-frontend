@@ -1,0 +1,46 @@
+<div class="login-form">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Enter values : </mat-card-title>
+        </mat-card-header>
+        <p></p>
+        <mat-card-content>
+            <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Age" [(ngModel)]="age" name="age" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Phone" [(ngModel)]="phone" name="phone" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Address ID" [(ngModel)]="addressid" name="addressid" required>
+                        <mat-hint align="end">Check Address table for ID</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="add()" color="primary">Add</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,38 @@
+<div class="login-form">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Enter values : </mat-card-title>
+        </mat-card-header>
+        <p></p>
+        <mat-card-content>
+            <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="House Number" [(ngModel)]="housenumber" name="housenumber" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Area" [(ngModel)]="area" name="area" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="pincode" [(ngModel)]="pincode" name="pincode" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="addAddress()" color="primary">Add</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

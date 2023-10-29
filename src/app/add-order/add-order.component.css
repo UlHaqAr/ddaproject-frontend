@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .example-full-width {
+    width: 80%;
+    align-items: center;
+  }
+
+  example-card {
+    width: 100px;
+    height: 1000px;
+    align-items: center;
+  }

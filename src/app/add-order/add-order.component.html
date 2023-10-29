@@ -1,0 +1,88 @@
+<div class="login-form">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Enter values : </mat-card-title>
+        </mat-card-header>
+        <p></p>
+        <mat-card-content>
+            <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Order Type</mat-label>
+                            <mat-select [(ngModel)]="ordertype" name="ordertype" required>
+                              <mat-option value="0">Local</mat-option>
+                              <mat-option value="1">Domestic</mat-option>
+                              <mat-option value="2">Foreign</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="User Name" [(ngModel)]="userName" name="userName" required>
+                        <mat-hint align="end">Give logged-in username</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password" [(ngModel)]="password" name="password" required>
+                        <mat-hint align="end">Give saved password for the user</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Total Amount" [(ngModel)]="totalamount" name="totalamount" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Sender ID" [(ngModel)]="senderid" name="senderid" required>
+                        <mat-hint align="end">Check Customer table for ID</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Receiver ID" [(ngModel)]="receiverid" name="receiverid" required>
+                        <mat-hint align="end">Check Customer table for ID</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Item ID" [(ngModel)]="itemid" name="itemid" required>
+                        <mat-hint align="end">Check Item table for ID</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Order Status</mat-label>
+                            <mat-select [(ngModel)]="orderstatus" name="orderstatus" required>
+                              <mat-option value="0">Pending</mat-option>
+                              <mat-option value="1">Cancelled</mat-option>
+                              <mat-option value="2">Completed</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="add()" color="primary">Add</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

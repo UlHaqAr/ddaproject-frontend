@@ -1,0 +1,50 @@
+<div class="login-form">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Enter values : </mat-card-title>
+        </mat-card-header>
+        <p></p>
+        <mat-card-content>
+            <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Item Type</mat-label>
+                            <mat-select [(ngModel)]="itemtype" name="itemtype" required>
+                              <mat-option value="0">Stationary</mat-option>
+                              <mat-option value="1">Textile</mat-option>
+                              <mat-option value="2">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Quantity" [(ngModel)]="itemquantity" name="itemquantity" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Name" [(ngModel)]="itemname" name="itemname" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Price" [(ngModel)]="itemprice" name="itemprice" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="add()" color="primary">Add</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

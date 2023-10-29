@@ -1,0 +1,53 @@
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Order ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="orderdetailsender">
+      <th mat-header-cell *matHeaderCellDef> Sender (ID) </th>
+      <td mat-cell *matCellDef="let element"> {{element.orderdetail.sender.name}} ({{element.orderdetail.sender.id}}) </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="orderdetailreceiver">
+      <th mat-header-cell *matHeaderCellDef> Receiver (ID) </th>
+      <td mat-cell *matCellDef="let element"> {{element.orderdetail.receiver.name}} ({{element.orderdetail.receiver.id}}) </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="orderdetailtotalamount">
+      <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.orderdetail.totalamount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="itemid">
+      <th mat-header-cell *matHeaderCellDef> Item Name (ID) </th>
+      <td mat-cell *matCellDef="let element"> {{element.item.itemname}} ({{element.item.id}}) </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ordertype">
+        <th mat-header-cell *matHeaderCellDef> Order Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.ordertype == 0 ? 'Local' : element.itemtype == 1 ? 'Domestic' : 'Foreign'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="orderstatus">
+        <th mat-header-cell *matHeaderCellDef> Order Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderstatus == 0 ? 'Pending' : element.itemtype == 1 ? 'Cancelled' : 'Completed'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> User Name (ID)</th>
+        <td mat-cell *matCellDef="let element"> {{element.user.userName}} ({{element.user.id}}) </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
